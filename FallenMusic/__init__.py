@@ -68,13 +68,13 @@ async def fallen_boot():
     )
     console.print(header)
     with console.status(
-        "[magenta] Booting Fallen Music Bot...",
+        "[magenta] Booting Neko Music Bot...",
     ) as status:
-        console.print("┌ [red]Booting Fallen Music Clients...\n")
+        console.print("┌ [red]Booting Neko Music Clients...\n")
         await app.start()
         await Ass.start()
         console.print("└ [green]Clients Booted Successfully!")
-        initial = await startup_msg("**» ʙᴏᴏᴛɪɴɢ ғᴀʟʟᴇɴ ᴍᴜsɪᴄ ʙᴏᴛ...**")
+        initial = await startup_msg("**» ʙᴏᴏᴛɪɴɢ ɴᴇᴋᴏ ᴍᴜsɪᴄ ʙᴏᴛ...**")
         await asyncio.sleep(0.1)
         all_over = await startup_msg("**» ᴄʜᴇᴄᴋɪɴɢ ᴀɴᴅ ᴄʀᴇᴀᴛɪɴɢ ᴍɪssɪɴɢ ᴅɪʀᴇᴄᴛᴏʀɪᴇs...**")
         console.print(
