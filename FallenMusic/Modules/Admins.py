@@ -39,26 +39,26 @@ __MODULE__ = "Aᴅᴍɪɴs"
 async def admins(_, message: Message):
     global get_queue
     if not len(message.command) == 1:
-        return await message.reply_text("**ᴡᴛғ ʙᴀʙʏ !**")
+        return await message.reply_text("**Wtf baby!**")
     if not await is_active_chat(message.chat.id):
-        return await message.reply_text("**» ᴅɪᴅ ʏᴏᴜ ʀᴇᴍᴇᴍʙᴇʀ ᴛʜᴀᴛ ʏᴏᴜ'ᴠᴇ ᴩʟᴀʏᴇᴅ sᴏᴍᴇᴛʜɪɴɢ ?**")
+        return await message.reply_text("**» Did you remember that you've played something?**")
     chat_id = message.chat.id
     if message.command[0][1] == "a":
         if not await is_music_playing(message.chat.id):
-            return await message.reply_text("**» sᴛʀᴇᴀᴍ ᴀʟʀᴇᴀᴅʏ ᴩᴀᴜsᴇᴅ.**")
+            return await message.reply_text("**» Stream already paused.**")
         await music_off(chat_id)
         await Fallen.pytgcalls.pause_stream(chat_id)
         await message.reply_text(
-            f"➻ **sᴛʀᴇᴀᴍ ᴩᴀᴜsᴇᴅ** ☁️\n│ \n└ʙʏ : {message.from_user.first_name} 🥀",
+            f"➻ **Stream paused**\n│ \n└By **»** {message.from_user.first_name}",
             reply_markup=audio_markup,
         )
     if message.command[0][1] == "e":
         if await is_music_playing(message.chat.id):
-            return await message.reply_text("**» ᴅɪᴅ ʏᴏᴜ ʀᴇᴍᴇᴍʙᴇʀ ᴛʜᴀᴛ ʏᴏᴜ'ᴠᴇ ᴩᴀᴜsᴇᴅ sᴏᴍᴇᴛʜɪɴɢ ?**")
+            return await message.reply_text("**» Did you remember that you've paused something?**")
         await music_on(chat_id)
         await Fallen.pytgcalls.resume_stream(message.chat.id)
         await message.reply_text(
-            f"➻ **sᴛʀᴇᴀᴍ ʀᴇsᴜᴍᴇᴅ** ✨\n│ \n└ʙʏ : {message.from_user.first_name} 🥀",
+            f"➻ **Stream resumed**\n│ \n└By **»** {message.from_user.first_name}",
             reply_markup=audio_markup,
         )
     if message.command[0][1] == "t" or message.command[0][1] == "n":
@@ -69,7 +69,7 @@ async def admins(_, message: Message):
         await remove_active_chat(chat_id)
         await Fallen.pytgcalls.leave_group_call(message.chat.id)
         await message.reply_text(
-            f"➻ **sᴛʀᴇᴀᴍ ᴇɴᴅᴇᴅ/sᴛᴏᴩᴩᴇᴅ** ❄\n│ \n└ʙʏ : {message.from_user.first_name} 🥀",
+            f"➻ **Stream ended/stopped**\n│ \n└By **»** {message.from_user.first_name}",
             reply_markup=close_key,
         )
     if message.command[0][1] == "k" or message.command[0][2] == "x":
@@ -77,7 +77,7 @@ async def admins(_, message: Message):
         if Queues.is_empty(chat_id):
             await remove_active_chat(chat_id)
             await message.reply_text(
-                f"➻ **sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ** 🥺\n│ \n└ʙʏ : {message.from_user.first_name} 🥀\n\n» ɴᴏ ᴍᴏʀᴇ ǫᴜᴇᴜᴇᴅ ᴛʀᴀᴄᴋs ɪɴ {message.chat.title}, **ʟᴇᴀᴠɪɴɢ ᴠɪᴅᴇᴏᴄʜᴀᴛ.**",
+                f"➻ **Stream skipped**\n│ \n└By **»** {message.from_user.first_name}\n\n» No more queued tracks in {message.chat.title}, **Leaving VC.**",
                 reply_markup=close_key,
             )
             await Fallen.pytgcalls.leave_group_call(message.chat.id)
@@ -91,7 +91,7 @@ async def admins(_, message: Message):
             aud = 0
             if str(finxx) != "raw":
                 mystic = await message.reply_text(
-                    f"**» ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ɴᴇxᴛ ᴛʀᴀᴄᴋ ғʀᴏᴍ ᴩʟᴀʏʟɪsᴛ...**"
+                    f"**» Downloading next track from playlist...**"
                 )
                 (
                     title,
@@ -100,7 +100,7 @@ async def admins(_, message: Message):
                     thumbnail,
                 ) = get_yt_info_id(videoid)
                 await mystic.edit(
-                    f"**» {BOT_NAME} ᴅᴏᴡɴʟᴏᴀᴅᴇʀ**\n\n**ᴛɪᴛʟᴇ :** {title}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
+                    f"**» {BOT_NAME} Downloader**\n\n**Title :** {title}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
                 )
                 downloaded_file = await loop.run_in_executor(
                     None, download, videoid, mystic, title
@@ -125,7 +125,7 @@ async def admins(_, message: Message):
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
                     caption=(
-                        f"<b>➻ sᴛᴀʀᴛᴇᴅ sᴛʀᴇᴀᴍɪɴɢ</b>\n\n<b>✨ ᴛɪᴛʟᴇ :</b> [{title[:40]}](https://www.youtube.com/watch?v={videoid})\n☁ <b>ᴅᴜʀᴀᴛɪᴏɴ :</b> {duration_min} ᴍɪɴᴜᴛᴇs\n🥀 <b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {mention}"
+                        f"<b>➻ Streaming started</b>\n\n<b>» Title :</b> [{title[:40]}](https://www.youtube.com/watch?v={videoid})\n» <b>Duration :</b> {duration_min} minutes\n» <b>Requested by :</b> {mention}"
                     ),
                 )
                 os.remove(thumb)
