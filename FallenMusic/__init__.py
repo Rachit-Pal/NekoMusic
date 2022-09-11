@@ -74,9 +74,9 @@ async def fallen_boot():
         await app.start()
         await Ass.start()
         console.print("└ [green]Clients Booted Successfully!")
-        initial = await startup_msg("**» ʙᴏᴏᴛɪɴɢ ɴᴇᴋᴏ ᴍᴜsɪᴄ ʙᴏᴛ...**")
+        initial = await startup_msg("**» Booting Neko Music bot...**")
         await asyncio.sleep(0.1)
-        all_over = await startup_msg("**» ᴄʜᴇᴄᴋɪɴɢ ᴀɴᴅ ᴄʀᴇᴀᴛɪɴɢ ᴍɪssɪɴɢ ᴅɪʀᴇᴄᴛᴏʀɪᴇs...**")
+        all_over = await startup_msg("**» Checking and creating missing directories...**")
         console.print(
             "\n┌ [red]Checking the existence of Required Directories..."
         )
@@ -88,7 +88,7 @@ async def fallen_boot():
             mkdir("Cache")
         console.print("└ [green]Directories Updated!")
         await asyncio.sleep(0.1)
-        ___ = await startup_edit(all_over, "**» ɢᴇᴛᴛɪɴɢ ᴄʟɪᴇɴᴛs ɪɴғᴏ...**")
+        ___ = await startup_edit(all_over, "**» Getting clients info...**")
         console.print("\n┌ [red]Getting Clients Info...")
         getme = await app.get_me()
         getass = await Ass.get_me()
@@ -108,7 +108,7 @@ async def fallen_boot():
         ASSMENTION = getass.mention
         console.print("└ [green]Successfully Loaded Clients Information !")
         await asyncio.sleep(0.1)
-        ____ok = await startup_edit(___, "**» ʟᴏᴀᴅɪɴɢ sᴜᴅᴏ ᴜsᴇʀs...**")
+        ____ok = await startup_edit(___, "**» Loading Sudo Users...**")
         console.print("\n┌ [red]Loading Sudo Users...")
         SUDO_USERS = (SUDO_USERS + OWNER_ID)
         await asyncio.sleep(1)
