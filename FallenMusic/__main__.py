@@ -117,12 +117,12 @@ async def fallen_boot():
 
 
 home_text_pm = f"""
-**ʜᴇʏ, ᴛʜɪs ɪs ɴᴇᴋᴏ ᴍᴜꜱɪᴄ**,
-**ᴀ ғᴀsᴛ ᴀɴᴅ ᴩᴏᴡᴇʀғᴜʟ ᴍᴜsɪᴄ ᴩʟᴀʏᴇʀ ʙᴏᴛ ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴠɪᴅᴇᴏᴄʜᴀᴛs.**
+**Hey, this is Neko Music**,
+**A fast and powerful music player bot for telegram group VC.**
 
 ➖➖➖➖➖➖➖➖➖➖➖➖
 
-ᴄʟɪᴄᴋ ᴏɴ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs
+Click on Help & Command button to get information about my commands
 """
 
 
@@ -142,9 +142,9 @@ async def start_command(_, message):
         if name[0] == "i":
             await app.send_message(
                     config.LOGGER_ID,
-                    f"» {message.from_user.mention} ʜᴀs ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <b>ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</b>\n\n**ɪᴅ :** {message.from_user.id}\n**ɴᴀᴍᴇ :** {message.from_user.first_name}",
+                    f"» {message.from_user.mention} has just started the bot to check <b>Track Information</b>\n\n**ID :** {message.from_user.id}\n**Name :** {message.from_user.first_name}",
                 )
-            m = await message.reply_text("**↻ sᴇᴀʀᴄʜɪɴɢ...\n\nᴩʟᴇᴀsᴇ ᴡᴀɪᴛ...**")
+            m = await message.reply_text("**↻ Searching...\n\nPlease wait...**")
             query = (str(name)).replace("info_", "", 1)
             query = f"https://www.youtube.com/watch?v={query}"
             results = VideosSearch(query, limit=1)
@@ -158,18 +158,18 @@ async def start_command(_, message):
                 link = result["link"]
                 published = result["publishedTime"]
             searched_text = f"""
-**ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ** 🎶
+**Track Information** 🎶
 
-» **ᴛɪᴛʟᴇ :** {title}
+» **Title :** {title}
 
-» **ᴅᴜʀᴀᴛɪᴏɴ :** {duration} ᴍɪɴᴜᴛᴇs
-» **ᴠɪᴇᴡs :** `{views}`
-» **ᴩᴜʙʟɪsʜᴇᴅ ᴏɴ :** {published}
-» **ᴄʜᴀɴɴᴇʟ :** {channel}
-» **ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ :** [ᴠɪsɪᴛ ᴄʜᴀɴɴᴇʟ]({channellink})
-» **ᴠɪᴅᴇᴏ ʟɪɴᴋ :** [ᴠɪsɪᴛ ᴏɴ ʏᴏᴜᴛᴜʙᴇ]({link})
+» **Duration :** {duration} minutes
+» **Views :** `{views}`
+» **Published on :** {published}
+» **Channel :** {channel}
+» **Channel link :** [Visit Channel]({channellink})
+» **Video link :** [View on YouTube]({link})
 
-sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME} 🌺"""
+sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME}"""
             key = InlineKeyboardMarkup(
                 [
                     [
@@ -210,7 +210,7 @@ sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME} 🌺"""
             ],
             [
                 InlineKeyboardButton(
-                    text="ᴄᴏᴍᴍᴀɴᴅ", callback_data="fallen_help"
+                    text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="fallen_help"
                 )
             ],
         ]
@@ -240,7 +240,7 @@ async def fallen_home(_, CallbackQuery):
             ],
             [
                 InlineKeyboardButton(
-                    text="ᴄᴏᴍᴍᴀɴᴅ", callback_data="fallen_help"
+                    text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="fallen_help"
                 )
             ],
         ]
